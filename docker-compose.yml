@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  botki:
+    build: .
+    container_name: botki
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - BOT_PREFIX=${BOT_PREFIX:-!}
+      - DATABASE_URL=jdbc:sqlite:botki.db
+      - DEBUG_MODE=${DEBUG_MODE:-false}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

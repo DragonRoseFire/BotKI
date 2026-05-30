@@ -1,0 +1,46 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.iml
+.classpath
+.project
+.settings/
+
+# Build
+target/
+build/
+dist/
+*.jar
+*.war
+*.ear
+*.class
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if needed)
+node_modules/
+package-lock.json
+
+# Misc
+*.tmp
+.gradle/
